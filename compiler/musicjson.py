@@ -27,15 +27,29 @@ class MusicJSON:
 			raise CompilerException("Changing tuning from g3b3e4 is not yet available")
 		self.settings[key] = value.lower().strip()
 	#
+	#	Get a setting
+	#
+	def get(self,key):
+		key = key.lower().strip()
+		if key not in self.settings:
+			raise CompilerException("Setting {0} unknown".format(key))
+		return self.settings[key]
+	#
 	#	Add a new bar.
 	#
 	def addBar(self):
 		self.bars.append([])
 		self.qbPosition = 0
 	#
+	#	Set the lyric
+	#
+	def setLyric(self,lyric):			
+		self.bars[-1].append("<"+lyric.lower().strip()+">")
+	#
 	#	Add a strum.
 	#
 	def addStrum(self,strum,qbLength):
+		strum = [x for x in strum]
 		strum.append(qbLength)
 		strum = "".join([chr(x+97) for x in strum])
 		strum = strum[:-1]+strum[-1].upper()
@@ -56,7 +70,8 @@ class MusicJSON:
 	#	Render a bar
 	#
 	def renderBar(self,contents):
-		return ";".join(contents)
+		render = ";".join(contents)
+		return render
 
 if __name__ == '__main__':
 	c = MusicJSON()

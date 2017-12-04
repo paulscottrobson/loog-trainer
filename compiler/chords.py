@@ -36,12 +36,12 @@ class ChordLibrary:
 				# Put in library
 				self.chords[chordName] = chordFingering 
 				#print(chordName,chordFingering)
-		#
-		#	Locate a chord, return None if not present
-		#
-		def find(self,chord):
-			chord = chord.lower.strip()
-			return self.chords[chord] if chord in self.chords else None
+	#
+	#	Locate a chord, return None if not present
+	#
+	def find(self,chord):
+		chord = chord.lower().strip()
+		return self.chords[chord] if chord in self.chords else None
 
 
 ChordLibrary.RAWDATA = """
