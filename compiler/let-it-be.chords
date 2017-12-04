@@ -1,0 +1,16 @@
+// *******************************************************************************************
+//
+//				Test file for .chords format : Let it be, by the Beatles
+//
+// *******************************************************************************************
+
+title := let it be (the beatles)
+tempo := 80
+beats := 4
+
+{d-d-d-d-}when i|[C]find myself in [G:3]times of trouble
+[Am] mother mary [F:3]comes to me|[C]speaking words of [G:3]wisdom let it|[F]be [C:3] and
+in my hour of [G:3]darkness she is|[Am]standing right in [G:3]front of me|[C]speaking words of [G:3]wisdom let it
+[F]be .... [C:3]let it be|[Am]let it be,[G:3]ah let it be
+[F]let it [C:3]be|whisper words of[G:3] wisdom let it|[F]be[C:3]
+
